@@ -3,7 +3,7 @@ import rospy
 import std_msgs.msg
 from std_msgs.msg import String
 
-class TestingScript():
+class PubTest():
     def __init__(self):
         self.textTopic = '/rostest/text'
         self.rosNodeText = 'rostest'
@@ -22,6 +22,8 @@ class TestingScript():
         self.PUB_string.publish("kosamona, masterpi in this bitch")
         self.r.sleep()
 
-
+if __name__ == "__main__":
+    print(f"{Fore.RED} Starting publisher")
+    PubTest()
 
 
